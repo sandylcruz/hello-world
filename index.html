@@ -1,42 +1,66 @@
 <!doctype html>
 <html>
-
   <head>
     <title>One Cool Cat</title>
     <style>
       body {
         background-color: #ffffff;
-        body: white;
         font-family: Helvetica;
-        color: 000000;
+        color: #000000;
         text-align: center;
+        margin: 0;
       }
 
       img {
         border-radius: 50%;
         width: 300px;
         height: 300px;
+        opacity: 0.8;
+        transition: opacity 200ms;
       }
 
-      </style>
-  </head>
+      img:hover {
+        opacity: 1.0;
+      }
 
-<body>
+      .box {
+        width: 300px;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+
+      /* On screens that are 500px wide or less, make the menu links stack on top of each other instead of next to each other */
+        @media screen (min-width: 300px) and (max-width: 500px) {
+          .box a {
+            float: none;
+            width: 500px;
+          }
+      }
+
+    </style>
+  </head>
+  <body>
     <h1>Hello World</h1>
     <h2>Here is a Cool Cat</h2>
-
-
-    <img src="squeaky-1x.jpg" alt="squeaky" />
-
-
-
-
-
-<Br> <br>
-<br>
-
-<button><strong>Rate This Cat</strong></button>
-
-</p>
-</body>
+    <div>
+      <img src="squeaky-1x.jpg" alt="squeaky" />
+    </div>
+    <div id="content-container">
+      <div class="box">
+        <h3>Fast Facts About Squeaky</h3>
+        <li>She is turning 3 soon.</li>
+        <li>She is a dilute tortie cat.</li>
+        <li>She prefers dry food to wet food.</li>
+      </div>
+      <div class="box">
+        <h3>Why Is Squeaky the Best?</h3>
+        <li>Squeaky was rescued from Santa Rosa so she is important.</li>
+        <li>She is a friend to other cats, even tuxedo cats.</li>
+      </div>
+    </div>
+    <button>
+      <strong>Rate This Cat</strong>
+    </button>
+  </body>
 </html>
